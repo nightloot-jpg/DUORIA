@@ -1,0 +1,6 @@
+{
+  "name": "DUORIA",
+  "description": "Espacio íntimo compartido para parejas a distancia: horas locales, cuenta atrás, latido háptico, feed privado, sala de cine sincronizada y bóveda secreta con Desire Match.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,56 +1,43 @@
-# Kindred Space
+# DUORIA — Espacio Íntimo Compartido
 
-Crear una aplicación web para parejas a distancia con diseño moderno, elegante y acogedor (modo oscuro con acentos cálidos y oro rosa), adaptada a móvil (PWA/responsive), que incluya las 5 pantallas principales:
+DUORIA es una aplicación nativa para Android desarrollada con Kotlin y Jetpack Compose, pensada como un espacio exclusivo y privado para parejas a distancia.
 
-1. Espacio Compartido (Home / Hub):
-- Cabecera con los dos perfiles emparejados, sus horas locales (ej. Madrid y Tokio), clima actual, nivel de batería y estado ("En el trabajo", "Durmiendo", "Libre").
-- Contador regresivo hacia el próximo reencuentro ("X días para volver a vernos").
-- Botón interactivo central de toque háptico / latido en directo que emite ondas luminosas al mantener pulsado.
-- Pizarrón de notas rápidas compartidas y recordatorios.
+## Características Principales
 
-2. Conexión (Preguntas Diarias & Retos):
-- Sistema de preguntas diarias con mecánica de "doble ciega": la respuesta de la pareja permanece borrosa/bloqueada con un candado hasta que el usuario envía su propia respuesta. Al revelarse ambas, se activa un micro-chat para comentarlas.
-- Pestaña de Retos cooperativos para hacer a distancia (ej. cocinar lo mismo, foto espontánea).
-- Sección de preguntas secretas personalizadas.
+1. **Hogar (Espacio Compartido):**
+   - Relojes digitales en vivo con actualización por segundo para ambas zonas horarias (Madrid / Tokio).
+   - Datos meteorológicos, estado de actividad y porcentaje de batería.
+   - Contador regresivo en tiempo real para el próximo reencuentro (Días, Horas, Minutos, Segundos).
+   - Botón de Latido en directo con pulsación táctil háptica (Vibrator API), ondas animadas y efecto visual de pulso.
+   - Pizarrón interactivo de notas y recordatorios compartidos con gestión completa (añadir, completar y eliminar).
 
-3. Sala de Cine (Watch Together estilo Rave):
-- Reproductor de vídeo con sincronización de reproducción (Play/Pausa y barra de tiempo).
-- Selector de vídeos (YouTube o enlaces).
-- Barra de reacciones con emojis animados flotantes sobre el vídeo (corazones, palomitas).
-- Chat de sala en directo y control de voz simulado.
+2. **Conexión (Preguntas y Retos Diarios):**
+   - **Diaria:** Pregunta del día con mecánica de doble revelación (desbloqueo al responder) e hilo de comentarios íntimos.
+   - **Retos:** Retos colaborativos ("Cocinar lo mismo", "Foto espontánea", "Playlist cruzada", "Misma luna") con marcadores sincronizados para ambos.
+   - **Secretas:** Creación de preguntas secretas individuales con respuestas privadas.
 
-4. Nuestro Feed (Instagram Privado para Dos):
-- Barra superior de historias efímeras (historias de 24h de ambos con anillo brillante).
-- Feed cronológico de publicaciones compartidas con fotos, textos, etiquetas de ubicación y reproductor de notas de voz adjuntas.
-- Botón de me gusta (contador "1/1 ❤️") y comentarios exclusivos.
-- Selector de vista entre Feed vertical y Cuadrícula (Grid 3x3) de recuerdos.
+3. **Sala de Cine (Watch Party en Directo):**
+   - Reproductor multimedia con ExoPlayer y selector de vídeos de muestra o enlaces directos.
+   - Indicador de sincronización en tiempo real ("Sincronizado · 2 viendo").
+   - Reacciones con emojis flotantes animados sobre la pantalla.
+   - Canal de voz con Yuki y chat en directo con respuestas inmediatas.
 
-5. Bóveda Íntima (Espacio Privado):
-- Pantalla de desbloqueo con PIN de seguridad de 4 dígitos o biometría simulada.
-- Dinámica "Desire Match": cartas de deseos y fantasías deslizables en doble ciega (solo se revela una carta si ambos han marcado que sí).
-- Bóveda de notas de voz encriptadas y recuerdos íntimos protegidos.
+4. **Nuestro Feed (Instagram para Dos):**
+   - Historias superiores con reproductor a pantalla completa con barra de progreso temporizada.
+   - Vista de Feed con tarjetas detalladas y vista de cuadrícula 3x3 de recuerdos.
+   - Doble toque en foto para dar me gusta ("1/1 ❤️").
+   - Reproductor de notas de voz con visualizador de ondas sonoras y temporizador regresivo.
+   - Hilo interactivo de comentarios en cada publicación.
 
-Navegación inferior limpia con 5 iconos intuitivos para alternar entre todas las secciones de forma fluida.
+5. **Bóveda Íntima (Espacio Protegido):**
+   - Bloqueo por teclado PIN numérico (demo: `1402`) y sensor biométrico de huella dactilar.
+   - **Desire Match:** Baraja de cartas de deseos íntimos con deslizamiento interactivo (Sí / No), detección de doble coincidencia y animación de match.
+   - **Recuerdos:** Notas de voz cifradas y galería protegida.
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://distance-love-app.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/56cff314-edc5-4ca2-8732-02e7f3ace2f2).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## Arquitectura y Tecnologías
+- **Lenguaje:** Kotlin
+- **UI:** Jetpack Compose (Material Design 3)
+- **Patrón:** MVVM con StateFlow y ViewModel
+- **Media:** AndroidX Media3 ExoPlayer
+- **Imágenes:** Coil Compose y drawables optimizados
+- **Hápticos:** Android Vibrator / VibrationEffect

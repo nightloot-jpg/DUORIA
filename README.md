@@ -1,5 +1,5 @@
 # DUORIA
 
-A private space for two. ❤️
+Un espacio privado para dos. ❤️ 
 
-This project is based on the initial couple-app prototype and will evolve in phases from prototype to a real private couple app.
+Este proyecto se basa en el prototipo inicial de la aplicación para parejas y evolucionará por fases, desde el prototipo hasta convertirse en una aplicación privada real para parejas.
